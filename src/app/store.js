@@ -1,8 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
-import countriesReducer from '../features/COVID/COVID-Slice';
+import logger from 'redux-logger';
+import covidReducer from '../features/COVID/COVID-Slice';
 
-export const store = configureStore({
+const store = configureStore({
   reducer: {
-    COVID: countriesReducer,
+    COVID: covidReducer,
   },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });
+
+export default store;

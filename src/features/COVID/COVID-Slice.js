@@ -1,32 +1,59 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { fetchCountries } from './COVID-API';
+import { fetchContinents } from './COVID-API';
 
 const initialState = {
-  status: 'idel',
-  value: [],
+  status: 'idle',
+  continents: [
+    {
+      name: '',
+      totalCases: 0,
+      countries: [],
+    },
+  ],
 };
 
-export const fetchCountriesAsync = createAsyncThunk('news/fetchCountries', async () => {
-  const response = await fetchCountries();
-  return response;
-});
+export const fetchContinentsAsync = createAsyncThunk(
+  'news/fetchContinents',
+  async (continentName) => {
+    const response = await fetchContinents(continentName);
+    const totalcases = response.reduce(
+      (total, item) => item.TotalCases + total,
+      0,
+    );
+    const data = {
+      name: continentName,
+      totalCases: totalcases,
+      countries: response,
+    };
+    return data;
+  },
+);
 
-export const countriesSlice = createSlice({
+export const covidSlice = createSlice({
   name: 'COVID',
   initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(fetchCountriesAsync.pending, (state) => {
-        state.status = 'loading';
-      })
-      .addCase(fetchCountriesAsync.fulfilled, (state, action) => {
-        state.status = 'idle';
-        state.value = action.payload;
-      });
+      .addCase(fetchContinentsAsync.pending, (state) => ({
+        ...state,
+        status: 'loading',
+      }))
+      .addCase(fetchContinentsAsync.fulfilled, (state, action) => ({
+        ...state,
+        status: 'idle',
+        continents: [
+          ...state.continents,
+          {
+            name: action.payload.name,
+            totalCases: action.payload.totalCases,
+            countries: action.payload.countries,
+          },
+        ],
+      }));
   },
 });
 
-export const selectCountries = (state) => state.COVID;
+export const selectState = (state) => state.COVID;
 
-export default countriesSlice.reducer;
+export default covidSlice.reducer;
