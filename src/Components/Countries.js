@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { shallowEqual, useSelector } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
 import { FaRegSun, FaMicrophone, FaAngleLeft } from 'react-icons/fa';
 import { selectState } from '../features/COVID/COVID-Slice';
@@ -14,7 +14,7 @@ import europeMap from '../assets/map/europe.svg';
 
 export default function Countries() {
   // get the country list depend on the pass continent name
-  const countries = useSelector(selectState);
+  const countries = useSelector(selectState, shallowEqual);
   const location = useLocation();
   const { name } = location.state;
   let map = '';

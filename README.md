@@ -76,8 +76,9 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-
+- Design is inspired from a design made by [Nelson Sakwa](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)).
+- Linters are made by [Microverse Inc](https://github.com/microverseinc/linters-config/).
 
 ## 📝 License
 
-This project is [MIT](./MIT.md) licensed.
+This project is released under [AGPL](./LICENSE) licensed.
