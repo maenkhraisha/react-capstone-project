@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { Provider, useDispatch } from 'react-redux';
 import ContinentsPage from './Pages/ContinentsPage';
 import CountriesPage from './Pages/CountriesPage';
 
@@ -19,13 +19,15 @@ function App() {
 
   return (
     <div className="App">
-      <Router>
-        <Routes>
-          <Route path="/" element={<ContinentsPage />} />
-          <Route path="/continents" element={<ContinentsPage />} />
-          <Route path="/countries" element={<CountriesPage />} />
-        </Routes>
-      </Router>
+      <Provider>
+        <Router>
+          <Routes>
+            <Route path="/" element={<ContinentsPage />} />
+            <Route path="/continents" element={<ContinentsPage />} />
+            <Route path="/countries" element={<CountriesPage />} />
+          </Routes>
+        </Router>
+      </Provider>
     </div>
   );
 }

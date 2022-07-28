@@ -2,13 +2,13 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { FaRegSun, FaMicrophone } from 'react-icons/fa';
 
-import worldMap from '../map/world.svg';
-import asiaMap from '../map/asia.svg';
-import africaMap from '../map/africa.svg';
-import southAmericaMap from '../map/south-america.svg';
-import northAmericaMap from '../map/north-america.svg';
-import australiaMap from '../map/australia.svg';
-import europeMap from '../map/europe.svg';
+import worldMap from '../assets/map/world.svg';
+import asiaMap from '../assets/map/asia.svg';
+import africaMap from '../assets/map/africa.svg';
+import southAmericaMap from '../assets/map/south-america.svg';
+import northAmericaMap from '../assets/map/north-america.svg';
+import australiaMap from '../assets/map/australia.svg';
+import europeMap from '../assets/map/europe.svg';
 
 import { selectState } from '../features/COVID/COVID-Slice';
 
