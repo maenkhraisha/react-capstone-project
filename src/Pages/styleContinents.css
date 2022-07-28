@@ -1,52 +1,68 @@
-
 :root {
   --main-color: #4369b1;
 }
+
 @font-face {
   font-family: "GillSans";
-  src: local("GillSans"),
-      url(../assets/font/GillSans.otf) format("truetype");
+  src:
+    local("GillSans"),
+    url(../assets/font/GillSans.otf) format("truetype");
   font-weight: bold;
 }
+
 @font-face {
   font-family: "GillSansBold";
-  src: local("GillSansBold"),
-      url(../assets/font/GillSansBold.otf) format("truetype");
+  src:
+    local("GillSansBold"),
+    url(../assets/font/GillSansBold.otf) format("truetype");
   font-weight: bold;
 }
+
 @font-face {
   font-family: "GillSansLight";
-  src: local("GillSansLight"),
-      url(../assets/font/GillSansLight.otf) format("truetype");
+  src:
+    local("GillSansLight"),
+    url(../assets/font/GillSansLight.otf) format("truetype");
   font-weight: bold;
 }
+
 @font-face {
   font-family: "GillSansMedium";
-  src: local("GillSansMedium"),
-      url(../assets/font/GillSansMedium.otf) format("truetype");
+  src:
+    local("GillSansMedium"),
+    url(../assets/font/GillSansMedium.otf) format("truetype");
   font-weight: bold;
 }
-.continent-item-name{
-  font-family: GillSansBold,serif;
+
+.continent-item-name {
+  font-family: GillSansBold, serif;
   font-size: 36px;
 }
-.continent-item-number{
-font-family: GillSans,serif;
+
+.continent-item-number {
+  font-family: GillSans, serif;
 }
-.continent-header>p{
-  font-family: GillSansLight, serif;
-}
-p, div {
+
+p,
+div {
   font-family: GillSansBold, serif;
 }
-a,a:active,a:visited{
+
+.continent-header > p {
+  font-family: GillSansLight, serif;
+}
+
+a,
+a:active,
+a:visited {
   text-decoration: none;
   color: white;
 }
+
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;  
+  box-sizing: border-box;
   color: white;
 }
 
@@ -57,36 +73,43 @@ body {
 
 .world-container {
   display: flex;
-  justify-content: space-between; 
-  background-color: #5789e5; 
+  justify-content: space-between;
+  background-color: #5789e5;
 }
 
 .status-bar {
   padding: 2%;
-  background-color: #35538c; 
+  background-color: #35538c;
   font-family: GillSansMedium, serif;
 }
 
-.continent-map{
+.continent-map {
   width: 100%;
   object-fit: contain;
 }
+
 .world-map {
   width: 50%;
 }
-.world-totalcases{
+
+.world-totalcases {
   margin: auto;
 }
 
-.asia,.africa,.europe{
+.asia,
+.africa,
+.europe {
   background-color: #4369b1;
 }
-.n-america,.s-america,.australia{
+
+.n-america,
+.s-america,
+.australia {
   background-color: #3e62a5;
 }
 
-.continent-item{
-  display: flex;  
+.continent-item {
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
@@ -98,11 +121,11 @@ body {
   position: relative;
   bottom: 0;
 }
-.continent-header{
+
+.continent-header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   padding: 0 2%;
   background-color: #4369b1;
 }
-@media only screen and (max-width: 600px) {}
