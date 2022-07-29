@@ -34,6 +34,14 @@
   font-weight: bold;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #4369b1;
+  color: white;
+}
+
 .continent-item-name {
   font-family: GillSansBold, serif;
   font-size: 36px;
@@ -56,13 +64,6 @@ a,
 a:active,
 a:visited {
   text-decoration: none;
-  color: white;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   color: white;
 }
 

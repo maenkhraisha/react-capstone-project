@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { shallowEqual, useSelector } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
 import { FaRegSun, FaMicrophone, FaAngleLeft } from 'react-icons/fa';
 import { selectState } from '../features/COVID/COVID-Slice';
 
 import './styleCountries.css';
-import asiaMap from '../map/asia.svg';
-import africaMap from '../map/africa.svg';
-import southamericaMap from '../map/south-america.svg';
-import northamericaMap from '../map/north-america.svg';
-import australiaMap from '../map/australia.svg';
-import europeMap from '../map/europe.svg';
+import asiaMap from '../assets/map/asia.svg';
+import africaMap from '../assets/map/africa.svg';
+import southamericaMap from '../assets/map/south-america.svg';
+import northamericaMap from '../assets/map/north-america.svg';
+import australiaMap from '../assets/map/australia.svg';
+import europeMap from '../assets/map/europe.svg';
 
 export default function Countries() {
   // get the country list depend on the pass continent name
-  const countries = useSelector(selectState);
+  const countries = useSelector(selectState, shallowEqual);
   const location = useLocation();
   const { name } = location.state;
   let map = '';
