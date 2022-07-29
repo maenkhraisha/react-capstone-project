@@ -33,7 +33,12 @@
     url(../assets/font/GillSansMedium.otf) format("truetype");
   font-weight: bold;
 }
-
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #4369b1;
+}
 .continent-item-name {
   font-family: GillSansBold, serif;
   font-size: 36px;
