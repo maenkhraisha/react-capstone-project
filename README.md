@@ -23,7 +23,7 @@ Go to live demo :
 - https://covid-watcher-maen.herokuapp.com/
 
 Demo Video:
-- http://loom.com
+- https://www.loom.com/share/4f19718a46b54b77bfa299bb72d39548
 
 ## out resourse
 ### API source 
