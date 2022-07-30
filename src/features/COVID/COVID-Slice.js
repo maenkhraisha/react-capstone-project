@@ -25,7 +25,6 @@ export const fetchContinentsAsync = createAsyncThunk(
       totalCases: totalcases,
       countries: response,
     };
-    console.log(data);
     return data;
   },
 );
