@@ -1,6 +1,6 @@
 import { fetchContinentsAsync } from '../COVID-Slice';
-
-import store from '../../../App/store';
+/* eslint-disable import/extensions */
+import store from '../../../App/store.js';
 
 /**
  * Testing the reducer thunk
