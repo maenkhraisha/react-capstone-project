@@ -25,6 +25,8 @@ Go to live demo :
 Demo Video:
 - https://www.loom.com/share/4f19718a46b54b77bfa299bb72d39548
 
+![portfolio](./src/assets/map/screenshot.png)
+
 ## out resourse
 ### API source 
 https://rapidapi.com/vaccovidlive-vaccovidlive-default/api/vaccovid-coronavirus-vaccine-and-treatment-tracker/
@@ -81,4 +83,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is released under [AGPL](./LICENSE) licensed.
+This project is [MIT](./MIT.md) licensed.
