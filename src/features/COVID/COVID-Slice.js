@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import fetchContinents from './COVID-API';
 
-const initialState = {
+export const initialState = {
   status: 'idle',
   continents: [
     {
