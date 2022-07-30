@@ -1,0 +1,113 @@
+@font-face {
+  font-family: "GillSans";
+  src:
+    local("GillSans"),
+    url(../assets/font/GillSans.otf) format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "GillSansBold";
+  src:
+    local("GillSansBold"),
+    url(../assets/font/GillSansBold.otf) format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "GillSansLight";
+  src:
+    local("GillSansLight"),
+    url(../assets/font/GillSansLight.otf) format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "GillSansMedium";
+  src:
+    local("GillSansMedium"),
+    url(../assets/font/GillSansMedium.otf) format("truetype");
+  font-weight: bold;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #4369b1;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.map-container {
+  background-color: #5f96fc;
+  padding: 2% 5%;
+}
+
+.map-container > img {
+  width: 90vw;
+  height: 30vh;
+}
+
+.country-status-bar {
+  background-color: #3e62a5;
+  padding: 2%;
+  font-family: GillSansMedium, serif;
+}
+
+.country-item {
+  align-items: baseline;
+}
+
+.country-name {
+  font-family: GillSansMedium, serif;
+  font-size: 24px;
+}
+
+.country-total-cases {
+  font-family: GillSans, serif;
+  font-size: 18px;
+}
+
+.country-list-item > ul > li {
+  display: flex;
+  justify-content: space-between;
+  padding: 3%;
+  background-color: #3e62a5;
+}
+
+.country-list-item > ul > li:nth-child(odd) {
+  background: #4d79cc;
+}
+
+.country-list-item > ul > li:nth-child(even) {
+  background: #4369b1;
+}
+
+.countries-header {
+  background-color: #4369b1;
+  padding: 2%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.countries-header [type="search"] {
+  background-color: #4369b1;
+  border: none;
+  color: white;
+  font-family: GillSansLight, serif;
+  font-size: 18px;
+}
+
+::placeholder {
+  color: white;
+}
+
+.header-right-icon {
+  display: flex;
+  gap: 1.5rem;
+}
